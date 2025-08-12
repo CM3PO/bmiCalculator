@@ -12,15 +12,8 @@ def calculate_bmi(weight_lbs, height_feet, height_inches):
     Returns:
         float: Calculated BMI.
     """
-  # Convert height to total inches
-    total_inches = (height_feet * 12) + height_inches 
-    total_inches = (height_feet *12) + height_inches
+    total_inches = (height_feet * 12) + height_inches
     bmi = (weight_lbs / (total_inches ** 2)) * 703
-
-    return bmi
-  # BMI Formula (using US customary units)
-  # BMI = (weight in pounds / (height in inches x height in inches)) * 703
-    bmi = (weight_lbs / (total_inches * total_inches)) * 703
     return bmi
 
 def interpret_bmi(bmi):
@@ -43,14 +36,6 @@ def interpret_bmi(bmi):
         return "Obese"
 
 # --- USER INPUT SECTION ---
-
-# Gender input
-while True:
-    gender = input("Enter your gender (Male, Female, or Prefer not to answer): ").strip().lower()
-    if gender in ["male", "female", "prefer not to answer"]:
-        break
-    else:
-        print("Please enter 'Male', 'Female', or 'Prefer not to answer'.")
 
 # Weight input
 while True:
@@ -81,6 +66,14 @@ while True:
         break
     except ValueError:
         print("Please enter your height in inches (between 0 and 11).")
+
+# Gender input
+while True:
+    gender = input("Enter your gender (Male, Female, or Prefer not to answer): ").strip().lower()
+    if gender in ["male", "female", "prefer not to answer"]:
+        break
+    else:
+        print("Please enter 'Male', 'Female', or 'Prefer not to answer'.")
 
 # --- BMI CALCULATION AND INTERPRETATION ---
 
