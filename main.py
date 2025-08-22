@@ -40,7 +40,7 @@ def interpret_bmi(bmi):
 # Weight input
 while True:
     try:
-        weight_lbs = float(input("Enter your weight in pounds: "))
+        weight_lbs = float(input("Please nter your weight in pounds: "))
         if weight_lbs <= 0:
             raise ValueError
         break
@@ -50,7 +50,7 @@ while True:
 # Height (feet) input
 while True:
     try:
-        height_feet = int(input("Enter your height in feet: "))
+        height_feet = int(input("Please enter your height in feet: "))
         if height_feet < 0:
             raise ValueError
         break
@@ -60,7 +60,7 @@ while True:
 # Height (inches) input
 while True:
     try:
-        height_inches = int(input("Enter your height in inches (0–11): "))
+        height_inches = int(input("Please enter your height in inches (0–11): "))
         if not (0 <= height_inches <= 11):
             raise ValueError
         break
@@ -69,7 +69,7 @@ while True:
 
 # Gender input
 while True:
-    gender = input("Enter your gender (Male, Female, or Prefer not to answer): ").strip().lower()
+    gender = input("Please enter your gender (Male, Female, or Prefer not to answer): ").strip().lower()
     if gender in ["male", "female", "prefer not to answer"]:
         break
     else:
